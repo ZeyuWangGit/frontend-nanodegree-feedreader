@@ -34,7 +34,7 @@ $(function() {
         it('Allfeeds URL defined and URL not empty', function () {
             for (var i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBe(0);
+                expect(allFeeds[i].url.length).not.toBe(0);
             }
         });
 
@@ -46,7 +46,7 @@ $(function() {
         it('Allfeeds Name defined and Name not empty', function () {
             for (var i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name).not.toBe(0);
+                expect(allFeeds[i].name.length).not.toBe(0);
             }
         });
 
@@ -123,7 +123,7 @@ $(function() {
           */
          it('Content changed when new feed loaded', function () {
              /*Load second time and check whether the content is the same*/
-             loadFeed(0, function () {
+             loadFeed(1, function () {
                  after = $('.feed').find('.entry').text();
                  expect(before).not.toEqual(after);
                  done();
