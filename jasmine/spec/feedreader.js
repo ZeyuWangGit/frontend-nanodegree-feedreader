@@ -121,7 +121,7 @@ $(function() {
           * by the loadFeed function that the content actually changes.
           * Remember, loadFeed() is asynchronous.
           */
-         it('Content changed when new feed loaded', function () {
+         it('Content changed when new feed loaded', function (done) {
              /*Load second time and check whether the content is the same*/
              loadFeed(1, function () {
                  after = $('.feed').find('.entry').text();
